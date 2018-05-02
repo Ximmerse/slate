@@ -6,7 +6,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
 
 
 toc_footers:
-  - <a href='https://github.com/lord/slate'>SDK下载地址</a>
+  - <a href='https://gitee.com/XIMMERSE-SZ/XimmerseSDK'>SDK下载地址</a>
 includes:
 
 
@@ -56,65 +56,65 @@ SDK本身还有供给开发者参考的demo。本文将以MiniWorldAR Demo为例
 
 # API文档
 
-## XRInput
-XRInput本身是对ControllerInput的封装。目前只支持单个手柄（也就是做手柄或XCobra-0手柄）。
+## XCobraInput
+XCobraInput本身是对ControllerInput的封装。目前只支持单个手柄（也就是做手柄或XCobra-0手柄）。
 
-### XRInput.Initialize()
+### XCobraInput.Initialize()
 Type | 解释
 --------- | ------- 
 void | 初始化SDK和硬件。
 
-### XRInput.HeadDeltaRotationAngle
+### XCobraInput.HeadDeltaRotationAngle
 Type | 解释
 --------- | ------- 
 float | 获取头部旋转delta角度（和上一帧比较）。
 
-### XRInput.HasControllerTriggerInput（）
+### XCobraInput.HasControllerTriggerInput（）
 Type | 解释
 --------- | ------- 
 bool | 手柄trigger是否按下。
 
-### XRInput.HasControllerRecenterInput（）
+### XCobraInput.HasControllerRecenterInput（）
 Type | 解释
 --------- | ------- 
 bool | 回中按键是否按下。
 
-### XRInput.RecenterController(float yaw)（）
+### XCobraInput.RecenterController(float yaw)（）
 Type | 解释
 --------- | ------- 
 void | 进行回中处理。通常可以用参数0.0f来使手柄和当前头部方向一致。
 
-### XRInput.GetControllerRotation（）
+### XCobraInput.GetControllerRotation（）
 Type | 解释
 --------- | ------- 
 Quaternion | 获取手柄旋转姿态（这是处理后的旋转姿态，可以直接使用）。
 
-### XRInput.GetControllerRawRotation（）
+### XCobraInput.GetControllerRawRotation（）
 Type | 解释
 --------- | ------- 
 Quaternion | 获取手柄旋转姿态（裸数据）。
 
-### XRInput.Viberate(int strength, float time)
+### XCobraInput.Viberate(int strength, float time)
 Type | 解释
 --------- | ------- 
 void | 使手柄震动。strength为强度，取值区间为0-100。
 
-### XRInput.IsControllerButtonDown(XimmerseButton btn)
+### XCobraInput.IsControllerButtonDown(XimmerseButton btn)
 Type | 解释
 --------- | ------- 
 bool | 判断XimmerseButton是否被按下（和上一帧对比）。
 
-### XRInput.IsControllerButtonUp(XimmerseButton btn)
+### XCobraInput.IsControllerButtonUp(XimmerseButton btn)
 Type | 解释
 --------- | ------- 
 bool | 判断XimmerseButton是否被松开（和上一帧对比）。
 
-### XRInput.IsControllerButtonPressed(XimmerseButton btn)
+### XCobraInput.IsControllerButtonPressed(XimmerseButton btn)
 Type | 解释
 --------- | ------- 
 bool | 判断XimmerseButton当前是否被按下。
 
-### XRInput.GetTouchPadPosition（）
+### XCobraInput.GetTouchPadPosition（）
 Type | 解释
 --------- | ------- 
 Vector2 | 给出当前touch pad手指的位置。
